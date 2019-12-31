@@ -3,7 +3,7 @@
 [![](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%243-orange)](https://www.buymeacoffee.com/T2tZvWJ)
 
 
-# FoundryVTT-13th-Age-Expanded
+# FoundryVTT 13th Age Expanded
 
 A small set of additional features for https://gitlab.com/asacolips-projects/foundry-mods/archmage/tree/master
 
