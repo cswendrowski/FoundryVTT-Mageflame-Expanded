@@ -1,3 +1,23 @@
 {
+    "13AE.CHARACTERFLAGS.feats": "Feats",
+    "13AE.CHARACTERFLAGS.incrementals": "Incrementals",
 
+    "13AE.CHARACTERFLAGS.initiativeAdvName": "Quick to Fight",
+    "13AE.CHARACTERFLAGS.initiativeAdvHint": "Human racial feat to roll 2d20 for initiative and keep the higher roll.",
+    "13AE.CHARACTERFLAGS.improvedIniativeName": "Improved Initiative",
+    "13AE.CHARACTERFLAGS.improvedIniativeHint": "General feat to increase initiative by +4.",
+    "13AE.CHARACTERFLAGS.featName": "Feature",
+    "13AE.CHARACTERFLAGS.featHint": "Choose one feature as if you were the next level",
+    "13AE.CHARACTERFLAGS.hpName": "Hit Points",
+    "13AE.CHARACTERFLAGS.hpHint": "Increase your HP as if you were the next level",
+    "13AE.CHARACTERFLAGS.skillsName": "Skills",
+    "13AE.CHARACTERFLAGS.skillsHint": "Add +1 to all skill rolls",
+    "13AE.CHARACTERFLAGS.extraMagicItemName": "Extra Magic Item",
+    "13AE.CHARACTERFLAGS.extraMagicItemHint": "Carry an extra Magic Item without becoming overwhelmed by Quirks",
+    "13AE.CHARACTERFLAGS.abilityScoreBonusName": "Ability Score Bonus",
+    "13AE.CHARACTERFLAGS.abilityScoreBonusHint": "4th/7th/10th Level (+1 to 3 abilities)",
+    "13AE.CHARACTERFLAGS.iconRelationshipPointName": "Icon Relationship Point",
+    "13AE.CHARACTERFLAGS.iconRelationshipPointHint": "5th/8th Level",
+    "13AE.CHARACTERFLAGS.powerSpellName": "Power / Spell",
+    "13AE.CHARACTERFLAGS.powerSpellHint": "Choose a power / spell as if you were the next level"
 }
