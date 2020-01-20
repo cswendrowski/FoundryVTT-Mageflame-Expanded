@@ -1,5 +1,5 @@
 (() => {
-  const version = 1.0;  //Current Version
+  const version = 1.2;  //Current Version
 
   //Bootstrap
   if (!window.ThirtenthAgeExpanded) {
@@ -22,111 +22,48 @@
   window.ThirtenthAgeExpanded.setup = () => {
     console.log(`13th Age Expanded | Initializing v` + version);
 
+    Actors.registerSheet("archmage", ExpandedActorArchmageSheet, {
+      types: [],
+      makeDefault: true
+    });
+    Actors.registerSheet("archmage", MonkActorArchmageSheet, {
+      types: [],
+      makeDefault: false
+    });    
+
     RegisterConfigurationOptions();
 
-    Hooks.on('ready', () => {
-      RegisterCharacterFlags();
-    });
-
-    // Hooks.on('renderActorArchmageSheet', (app, html, data) => {
-    //   console.log(app);
-    //   console.log(html);
-    //   console.log(data);
-
-    //   var abilitiesTab = html.find(".abilities");
-
-    //   AddIncrementals(abilitiesTab);
-    // });
   };
 })();
 
-function RegisterCharacterFlags() {
-  CONFIG.Actor.characterFlags = {
-    "initiativeAdv": {
-      name: game.i18n.localize("13AE.CHARACTERFLAGS.initiativeAdvName"),
-      hint: game.i18n.localize("13AE.CHARACTERFLAGS.initiativeAdvHint"),
-      section: game.i18n.localize("13AE.CHARACTERFLAGS.feats"),
-      type: Boolean
-    },
-    "improvedIniative": {
-      name: game.i18n.localize("13AE.CHARACTERFLAGS.improvedIniativeName"),
-      hint: game.i18n.localize("13AE.CHARACTERFLAGS.improvedIniativeHint"),
-      section: game.i18n.localize("13AE.CHARACTERFLAGS.feats"),
-      type: Boolean
-    },
-    "feat": {
-      name: game.i18n.localize("13AE.CHARACTERFLAGS.featName"),
-      hint: game.i18n.localize("13AE.CHARACTERFLAGS.featHint"),
-      section: game.i18n.localize("13AE.CHARACTERFLAGS.incrementals"),
-      type: Boolean
-    },
-    "hp": {
-      name: game.i18n.localize("13AE.CHARACTERFLAGS.hpName"),
-      hint: game.i18n.localize("13AE.CHARACTERFLAGS.hpHint"),
-      section: game.i18n.localize("13AE.CHARACTERFLAGS.incrementals"),
-      type: Boolean
-    },
-    "skills": {
-      name: game.i18n.localize("13AE.CHARACTERFLAGS.skillsName"),
-      hint: game.i18n.localize("13AE.CHARACTERFLAGS.skillsHint"),
-      section: game.i18n.localize("13AE.CHARACTERFLAGS.incrementals"),
-      type: Boolean
-    },
-    "extraMagicItem": {
-      name: game.i18n.localize("13AE.CHARACTERFLAGS.extraMagicItemName"),
-      hint: game.i18n.localize("13AE.CHARACTERFLAGS.extraMagicItemHint"),
-      section: game.i18n.localize("13AE.CHARACTERFLAGS.incrementals"),
-      type: Boolean
-    },
-    "abilityScoreBonus": {
-      name: game.i18n.localize("13AE.CHARACTERFLAGS.abilityScoreBonusName"),
-      hint: game.i18n.localize("13AE.CHARACTERFLAGS.abilityScoreBonusHint"),
-      section: game.i18n.localize("13AE.CHARACTERFLAGS.incrementals"),
-      type: Boolean
-    },
-    "iconRelationshipPoint": {
-      name: game.i18n.localize("13AE.CHARACTERFLAGS.iconRelationshipPointName"),
-      hint: game.i18n.localize("13AE.CHARACTERFLAGS.iconRelationshipPointHint"),
-      section: game.i18n.localize("13AE.CHARACTERFLAGS.incrementals"),
-      type: Boolean
-    },
-    "powerOrSpell1": {
-      name: game.i18n.localize("13AE.CHARACTERFLAGS.powerSpellName"),
-      hint: game.i18n.localize("13AE.CHARACTERFLAGS.powerSpellHint"),
-      section: game.i18n.localize("13AE.CHARACTERFLAGS.incrementals"),
-      type: Boolean
-    },
-    "powerOrSpell2": {
-      name: game.i18n.localize("13AE.CHARACTERFLAGS.powerSpellName"),
-      hint: game.i18n.localize("13AE.CHARACTERFLAGS.powerSpellHint"),
-      section: game.i18n.localize("13AE.CHARACTERFLAGS.incrementals"),
-      type: Boolean
-    },
-    "powerOrSpell3": {
-      name: game.i18n.localize("13AE.CHARACTERFLAGS.powerSpellName"),
-      hint: game.i18n.localize("13AE.CHARACTERFLAGS.powerSpellHint"),
-      section: game.i18n.localize("13AE.CHARACTERFLAGS.incrementals"),
-      type: Boolean
-    },
-    "powerOrSpell4": {
-      name: game.i18n.localize("13AE.CHARACTERFLAGS.powerSpellName"),
-      hint: game.i18n.localize("13AE.CHARACTERFLAGS.powerSpellHint"),
-      section: game.i18n.localize("13AE.CHARACTERFLAGS.incrementals"),
-      type: Boolean
-    }
-  };
+class ExpandedActorArchmageSheet extends ActorArchmageSheet {
+  get template() {
+    // adding the #equals and #unequals handlebars helper
+    Handlebars.registerHelper('equals', function (arg1, arg2, options) {
+        return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+    });
+
+    Handlebars.registerHelper('unequals', function (arg1, arg2, options) {
+        return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
+    });
+
+    return "modules/13th-age-expanded/templates/ExpandedActorArchmageSheet.html";
+  }
 }
 
-function AddIncrementals(abilitiesTab) {
-  var toAdd = "";
-  toAdd += checkbox("Melee Miss Dmg.", "data.attributes.weapon.melee.miss");
-  toAdd += checkbox("Ability Score Bonus (4th/7th/10th Level)", "data.incrementals.abilityScoreBonus");
-  toAdd += "</hr>";
-  abilitiesTab.append(toAdd);
-}
+class MonkActorArchmageSheet extends ActorArchmageSheet {
+  get template() {
+    // adding the #equals and #unequals handlebars helper
+    Handlebars.registerHelper('equals', function (arg1, arg2, options) {
+        return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+    });
 
-function checkbox(displayName, dataName) {
-  return '<div class="settings-group"><strong class="attribute-name">' + displayName + '</strong><input class="attribute-input" name="' + dataName + '" type="checkbox" value="1" checked="0" data-dtype="Boolean"></div>';
+    Handlebars.registerHelper('unequals', function (arg1, arg2, options) {
+        return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
+    });
+
+    return "modules/13th-age-expanded/templates/MonkActorArchmageSheet.html";
+  }
 }
 
 function RegisterConfigurationOptions() {
