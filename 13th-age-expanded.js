@@ -29,7 +29,11 @@
     Actors.registerSheet("archmage", MonkActorArchmageSheet, {
       types: [],
       makeDefault: false
-    });    
+    });
+    Actors.registerSheet("archmage", CommanderActorArchmageSheet, {
+      types: [],
+      makeDefault: false
+    });
 
     RegisterConfigurationOptions();
 
