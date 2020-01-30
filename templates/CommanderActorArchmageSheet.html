@@ -78,10 +78,12 @@
                 <div class="attribute-value">
                     <span>{{numberFormat data.attributes.init.mod decimals=0 sign=true}}</span>
                 </div>
-                <span class="attribute-subname">Command Points</span>
-                <input name="data.attributes.cp.temp" type="text" class="temphp" placeholder="0" value="{{data.attributes.cp.temp}}"
-                    data-dtype="{{data.attributes.cp.type}}" />
-                </div>
+                <footer class="attribute-footer attribute-footer--temp-hp">
+                    <span class="attribute-subname">CP</span>
+                    <input name="data.attributes.cp.temp" type="text" class="temphp" placeholder="0" value="{{data.attributes.cp.temp}}"
+                        data-dtype="{{data.attributes.cp.type}}" />
+                    </div>
+                </footer>
             </div>
         </div>
 
