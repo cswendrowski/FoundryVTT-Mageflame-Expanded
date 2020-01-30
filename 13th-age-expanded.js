@@ -66,6 +66,21 @@ class MonkActorArchmageSheet extends ActorArchmageSheet {
   }
 }
 
+class CommanderActorArchmageSheet extends ActorArchmageSheet {
+  get template() {
+    // adding the #equals and #unequals handlebars helper
+    Handlebars.registerHelper('equals', function (arg1, arg2, options) {
+        return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+    });
+
+    Handlebars.registerHelper('unequals', function (arg1, arg2, options) {
+        return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
+    });
+
+    return "modules/13th-age-expanded/templates/CommanderActorArchmageSheet.html";
+  }
+}
+
 function RegisterConfigurationOptions() {
 
   Hooks.once('init', () => {
