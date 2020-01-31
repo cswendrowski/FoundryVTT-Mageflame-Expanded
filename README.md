@@ -16,3 +16,5 @@ A small set of additional features for https://gitlab.com/asacolips-projects/fou
 2) For all the Monks in your life, keep track of your Ki
 
 ![](./ki.PNG)
+
+3) Also Commanders can keep track of Command Points (CP)!
