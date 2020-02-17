@@ -8,3 +8,7 @@
 .archmage.sheet {
     height: 1059px !important;
 }
+
+.sheet-header {
+    height: 60px !important;
+}
