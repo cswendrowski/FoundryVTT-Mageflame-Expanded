@@ -12,3 +12,7 @@
 .sheet-header {
     height: 60px !important;
 }
+
+.minimized {
+    height: 31px !important;
+}
