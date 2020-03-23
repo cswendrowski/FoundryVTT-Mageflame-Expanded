@@ -5,18 +5,6 @@
     line-height: 14px !important;
 }
 
-.archmage.sheet {
-    height: 1059px !important;
-}
-
-.archmage.sheet.minimized {
-    height: 31px !important;
-}
-
 .sheet-header {
     height: 60px !important;
-}
-
-.minimized {
-    height: 31px !important;
 }
