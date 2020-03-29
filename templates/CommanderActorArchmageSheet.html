@@ -181,7 +181,30 @@
         </div>
 
         <!-- ITEMS -->
-        <div class="tab items" data-group="primary" data-tab="items"></div>
+        <div class="tab items" data-group="primary" data-tab="items">
+            <ol class="inventory-list directory-list">
+                <li class="item flexrow inventory-header">
+                    <div class="item-name flexrow">
+                        <span class="item-name">Name</span>
+                        <span class="item-type">Type</span>
+                    </div>
+                </li>
+
+                {{#each actor.equipment as |item i|}}
+                <li class="item flexrow item" data-item-id="{{item._id}}" data-index="{{i}}">
+                    <div class="item-name flexrow rollable">
+                        <div class=item-name>{{item.name}}</div>
+                        <div class=item-type>{{item.type}}</div>
+                    {{#if ../owner}}
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                    </div>
+                    {{/if}}
+                </li>
+                {{/each}}
+            </ol>
+        </div>
     </section>
 
     <!-- SIDEBAR -->
