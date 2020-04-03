@@ -20,10 +20,10 @@
   ],
   "packs": [
     {
-      "name": "birarelves",
+      "name": "briarelves",
       "label": "Briar Elves",
       "system": "archmage",
-      "path": "./packs/demonsandhell.db",
+      "path": "./packs/briarelves.db",
       "entity": "Actor"
     },
     {
