@@ -22,42 +22,42 @@
     {
       "name": "birarelves",
       "label": "Briar Elves",
-      "system": "13th Age",
+      "system": "archmage",
       "path": "./packs/demonsandhell.db",
       "entity": "Actor"
     },
     {
       "name": "chaosmagetables",
       "label": "Chaos Mage Tables",
-      "system": "13th Age",
+      "system": "archmage",
       "path": "./packs/chaosmagetables.db",
       "entity": "RollTable"
     },
     {
       "name": "demonsandhell",
       "label": "Demons and Hell",
-      "system": "13th Age",
+      "system": "archmage",
       "path": "./packs/demonsandhell.db",
       "entity": "Actor"
     },
     {
       "name": "greatghoul",
       "label": "Great Ghoul",
-      "system": "13th Age",
+      "system": "archmage",
       "path": "./packs/greatghoul.db",
       "entity": "Actor"
     },
     {
       "name": "hellmarsh",
       "label": "Hell Marsh",
-      "system": "13th Age",
+      "system": "archmage",
       "path": "./packs/hellmarsh.db",
       "entity": "Actor"
     },
     {
       "name": "kobolds",
       "label": "Kobolds",
-      "system": "13th Age",
+      "system": "archmage",
       "path": "./packs/kobolds.db",
       "entity": "Actor"
     }
