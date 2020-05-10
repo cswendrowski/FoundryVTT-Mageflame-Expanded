@@ -11,7 +11,7 @@ A small set of additional features for https://gitlab.com/asacolips-projects/fou
 
 # Features
 
-1) Keep track of your Incrementals! (Does not currently impact rolls automatically)
+1) Keep track of your Incrementals!
 
 ![](./incrementals.PNG)
 
@@ -19,7 +19,7 @@ A small set of additional features for https://gitlab.com/asacolips-projects/fou
 
 ![](./ki.PNG)
 
-3) Also Commanders can keep track of Command Points (CP)!
+3) Also Commanders can keep track of Command Points (CP) and Rogues their Momentum!
 
 4) A set of Compendium rollable tables for Chaos Mage
 
