@@ -1,10 +1,2 @@
 @charset "UTF-8";
 
-.incremental > .attribute-input {
-    height: 14px !important;
-    line-height: 14px !important;
-}
-
-.sheet-header {
-    height: 60px !important;
-}

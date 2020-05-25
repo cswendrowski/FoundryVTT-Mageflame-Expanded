@@ -1,7 +1,7 @@
 (() => { })();
 
 Hooks.once('ready', async function() {
-  const version = 1.3;  //Current Version
+  const version = 1.7;  //Current Version
 
   //Bootstrap
   if (!window.ThirtenthAgeExpanded) {
