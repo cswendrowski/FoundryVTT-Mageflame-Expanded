@@ -184,6 +184,68 @@
 
           <!-- ITEMS -->
           <div class="tab items" data-group="primary" data-tab="items">
+
+            <div class="primary-attributes currencies">
+                    <div class="attribute attribute--defenses attribute--currencies">
+                        <div class="attribute-value attribute-value--parent">
+                            <div class="attribute-sub" title='{{ localize "13AE.COINS.platinumHint" }}' >
+                                <strong class="attribute-name">{{ localize "13AE.COINS.platinum" }}</strong>
+                                <input name="data.coins.platinum.value" type="text" value="{{data.coins.platinum.value}}" data-dtype="{{data.coins.platinum.type}}" placeholder="0" class="currency-input" />
+                            </div>
+                            <div class="attribute-sub" title='{{ localize "13AE.COINS.goldHint" }}'>
+                                <strong class="attribute-name">{{ localize "13AE.COINS.gold" }}</strong>
+                                <input name="data.coins.gold.value" type="text" value="{{data.coins.gold.value}}" data-dtype="{{data.coins.gold.type}}" placeholder="0" class="currency-input" />
+                            </div>
+                            <div class="attribute-sub" title='{{ localize "13AE.COINS.silverHint" }}'>
+                                <strong class="attribute-name">{{ localize "13AE.COINS.silver" }}</strong>
+                                <input name="data.coins.silver.value" type="text" value="{{data.coins.silver.value}}" data-dtype="{{data.coins.silver.type}}" placeholder="0" class="currency-input" />
+                            </div>
+                            <div class="attribute-sub" title='{{ localize "13AE.COINS.copperHint" }}'>
+                                <strong class="attribute-name">{{ localize "13AE.COINS.copper" }}</strong>
+                                <input name="data.coins.copper.value" type="text" value="{{data.coins.copper.value}}" data-dtype="{{data.coins.copper.type}}" placeholder="0" class="currency-input" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                {{#if data.coins.showRare}}
+                <div class="primary-attributes currencies">
+                    <div class="attribute attribute--defenses attribute--currencies">
+                        <div class="attribute-value attribute-value--parent">
+                            <div class="attribute-sub" title='{{ localize "13AE.COINS.trinesHint" }}'>
+                                <strong class="attribute-name">{{ localize "13AE.COINS.trines" }}</strong>
+                                <input name="data.coins.trines.value" type="text" value="{{data.coins.trines.value}}" data-dtype="{{data.coins.trines.type}}" placeholder="0" class="currency-input" />
+                            </div>
+                            <div class="attribute-sub" title='{{ localize "13AE.COINS.impsHint" }}'>
+                                <strong class="attribute-name">{{ localize "13AE.COINS.imps" }}</strong>
+                                <input name="data.coins.imps.value" type="text" value="{{data.coins.imps.value}}" data-dtype="{{data.coins.imps.type}}" placeholder="0" class="currency-input" />
+                            </div>
+                            <div class="attribute-sub" title='{{ localize "13AE.COINS.towersHint" }}'>
+                                <strong class="attribute-name">{{ localize "13AE.COINS.towers" }}</strong>
+                                <input name="data.coins.towers.value" type="text" value="{{data.coins.towers.value}}" data-dtype="{{data.coins.towers.type}}" placeholder="0" class="currency-input" />
+                            </div>
+                            <div class="attribute-sub" title='{{ localize "13AE.COINS.glitsHint" }}'>
+                                <strong class="attribute-name">{{ localize "13AE.COINS.glits" }}</strong>
+                                <input name="data.coins.glits.value" type="text" value="{{data.coins.glits.value}}" data-dtype="{{data.coins.glits.type}}" placeholder="0" class="currency-input" />
+                            </div>
+                            <div class="attribute-sub" title='{{ localize "13AE.COINS.nupesHint" }}'>
+                                <strong class="attribute-name">{{ localize "13AE.COINS.nupes" }}</strong>
+                                <input name="data.coins.nupes.value" type="text" value="{{data.coins.nupes.value}}" data-dtype="{{data.coins.nupes.type}}" placeholder="0" class="currency-input" />
+                            </div>
+                            <div class="attribute-sub" title='{{ localize "13AE.COINS.saintsHint" }}'>
+                                <strong class="attribute-name">{{ localize "13AE.COINS.saints" }}</strong>
+                                <input name="data.coins.saints.value" type="text" value="{{data.coins.saints.value}}" data-dtype="{{data.coins.saints.type}}" placeholder="0" class="currency-input" />
+                            </div>
+                            <div class="attribute-sub" title='{{ localize "13AE.COINS.draksHint" }}'>
+                                <strong class="attribute-name">{{ localize "13AE.COINS.draks" }}</strong>
+                                <input name="data.coins.draks.value" type="text" value="{{data.coins.draks.value}}" data-dtype="{{data.coins.draks.type}}" placeholder="0" class="currency-input" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/if}}
+
               <ol class="inventory-list directory-list">
                   <li class="item flexrow inventory-header">
                       <div class="item-name flexrow">

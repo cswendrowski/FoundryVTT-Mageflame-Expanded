@@ -1,4 +1,9 @@
 {
+    "13AE.SETTINGS.ShowDebugLogsName": "Show debug logs?",
+    "13AE.SETTINGS.ShowDebugLogsHint": "Turn this on for bug reports",
+    "13AE.SETTINGS.ShowRareCoinsName": "Should rare coins be shown in the character sheet?",
+    "13AE.SETTINGS.ShowRareCoinsHint": "Rare coins include Towers, Trines, and Saints",
+
     "13AE.CHARACTERFLAGS.feats": "Feats",
     "13AE.CHARACTERFLAGS.incrementals": "Incrementals",
 
@@ -19,5 +24,29 @@
     "13AE.CHARACTERFLAGS.iconRelationshipPointName": "Icon Relationship Point",
     "13AE.CHARACTERFLAGS.iconRelationshipPointHint": "5th/8th Level",
     "13AE.CHARACTERFLAGS.powerSpellName": "Power / Spell",
-    "13AE.CHARACTERFLAGS.powerSpellHint": "Choose a power / spell as if you were the next level"
+    "13AE.CHARACTERFLAGS.powerSpellHint": "Choose a power / spell as if you were the next level",
+
+    "13AE.COINS.platinum": "Platinum",
+    "13AE.COINS.platinumHint": "1 Platinum = 10 Gold",
+    "13AE.COINS.gold": "Gold",
+    "13AE.COINS.goldHint": "1 Gold = 10 Silver",
+    "13AE.COINS.silver": "Silver",
+    "13AE.COINS.silverHint": "1 Silver = 10 Copper",
+    "13AE.COINS.copper": "Copper",
+    "13AE.COINS.copperHint": "10 Copper = 1 Silver",
+
+    "13AE.COINS.trines": "Trines",
+    "13AE.COINS.trinesHint": "Beautiful Elven coins that meld gold, silver, and platinum. Usually worth 3 Standard Gold pieces.",
+    "13AE.COINS.imps": "Imps",
+    "13AE.COINS.impsHint": "Standard Gold pieces from Axis",
+    "13AE.COINS.towers": "Towers",
+    "13AE.COINS.towersHint": "Standard Dwarven Gold pieces - square with grooved edges, they stack perfectly with themselves.",
+    "13AE.COINS.glits": "Glits",
+    "13AE.COINS.glitsHint": "Standard Gold pieces from Glitterhaegen",
+    "13AE.COINS.nupes": "Nupes",
+    "13AE.COINS.nupesHint": "Standard Gold pieces from New Port",
+    "13AE.COINS.saints": "Saints",
+    "13AE.COINS.saintsHint": "Standard Gold pieces from Santa Cora",
+    "13AE.COINS.draks": "Draks",
+    "13AE.COINS.draksHint": "Standard Gold pieces from Drakkenhall"
 }

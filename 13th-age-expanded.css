@@ -1,2 +1,14 @@
 @charset "UTF-8";
 
+.currency-input {
+    height: 25px !important;
+    text-align: center !important;
+}
+
+.attribute--currencies {
+    height: 50px !important;
+}
+
+.currencies {
+    flex: 0 0 60px !important;
+}
