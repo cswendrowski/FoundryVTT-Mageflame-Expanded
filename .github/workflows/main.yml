@@ -4,11 +4,11 @@ on:
     tags:
     - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
-name: Upload Release Asset
+name: Create Tagged Release
 
 jobs:
   build:
-    name: Upload Release Asset
+    name: Create Tagged Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -27,7 +27,7 @@ jobs:
           draft: false
           prerelease: false
       - name: Upload Release Zip
-        id: upload-release-asset 
+        id: upload-release-zip 
         uses: actions/upload-release-asset@v1.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -37,7 +37,7 @@ jobs:
           asset_name: 13thAgeExpanded.zip
           asset_content_type: application/zip
       - name: Upload Release Manifest
-        id: upload-release-asset 
+        id: upload-release-manifest 
         uses: actions/upload-release-asset@v1.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
