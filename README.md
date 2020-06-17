@@ -34,3 +34,7 @@ Features that are ~~struck-through~~ have been absorbed into Archmage
 7) ~~For those who deal in rarer coins, an optional world setting for the full list of coins from the Corebook~~
 
 ![](./rarecoins.PNG)
+
+8) A new sheet that reorganizes how Powers are shown
+
+![](./reorganized.PNG)
