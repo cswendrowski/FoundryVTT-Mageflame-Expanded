@@ -1,7 +1,7 @@
 (() => { })();
 
 Hooks.once('ready', async function() {
-  const version = 1.7;  //Current Version
+  const version = 2.0;  //Current Version
 
   //Bootstrap
   if (!window.ThirtenthAgeExpanded) {
@@ -10,9 +10,6 @@ Hooks.once('ready', async function() {
     $(() => window.ThirtenthAgeExpanded.setup());
   }
 
-  // if (window.ThirtenthAgeExpanded.loaded >= version) {
-  //   return;
-  // }
   window.ThirtenthAgeExpanded.loaded = version;
 
   function log(log) {
@@ -27,7 +24,7 @@ Hooks.once('ready', async function() {
   };
 
   const ActorArchmageSheet = game.archmage.ActorArchmageSheet;
-  class ExpandedActorArchmageSheet extends ActorArchmageSheet {
+  class ReorganizedActorArchmageSheet extends ActorArchmageSheet {
     get template() {
       // adding the #equals and #unequals handlebars helper
       Handlebars.registerHelper('equals', function (arg1, arg2, options) {
@@ -38,90 +35,25 @@ Hooks.once('ready', async function() {
           return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
       });
 
-      return "modules/13th-age-expanded/templates/ExpandedActorArchmageSheet.html";
+      return "modules/13th-age-expanded/templates/ReorganizedActorArchmageSheet.html";
     }
 
     getData() {
       const sheetData = super.getData();
-      if (sheetData.actor.type === 'character') {
-        if (!sheetData.actor.data.coins) {
-          sheetData.actor.data.coins = {
-            showRare: false,
-            platinum: 0,
-            gold: 0,
-            silver: 0,
-            copper: 0
-          }
-        }
 
-        sheetData.actor.data.coins.showRare = game.settings.get("13th-age-expanded", "showRareCoins");
-      }
+      console.log(sheetData);
+      sheetData.actor.class = sheetData.actor.powers.filter(power => power.data.actionType.value === "");
+      sheetData.actor.actions = sheetData.actor.powers.filter(power => power.data.actionType.value !== "");
 
       return sheetData;
     }
     
   }
 
-  class MonkActorArchmageSheet extends ExpandedActorArchmageSheet {
-    get template() {
-      // adding the #equals and #unequals handlebars helper
-      Handlebars.registerHelper('equals', function (arg1, arg2, options) {
-          return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
-      });
 
-      Handlebars.registerHelper('unequals', function (arg1, arg2, options) {
-          return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
-      });
-
-      return "modules/13th-age-expanded/templates/MonkActorArchmageSheet.html";
-    }
-  }
-
-  class CommanderActorArchmageSheet extends ExpandedActorArchmageSheet {
-    get template() {
-      // adding the #equals and #unequals handlebars helper
-      Handlebars.registerHelper('equals', function (arg1, arg2, options) {
-          return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
-      });
-
-      Handlebars.registerHelper('unequals', function (arg1, arg2, options) {
-          return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
-      });
-
-      return "modules/13th-age-expanded/templates/CommanderActorArchmageSheet.html";
-    }
-  }
-
-  class RogueActorArchmageSheet extends ExpandedActorArchmageSheet {
-    get template() {
-      // adding the #equals and #unequals handlebars helper
-      Handlebars.registerHelper('equals', function (arg1, arg2, options) {
-          return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
-      });
-
-      Handlebars.registerHelper('unequals', function (arg1, arg2, options) {
-          return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
-      });
-
-      return "modules/13th-age-expanded/templates/RogueActorArchmageSheet.html";
-    }
-  }
-
-  Actors.registerSheet("archmage", ExpandedActorArchmageSheet, {
+  Actors.registerSheet("archmage", ReorganizedActorArchmageSheet, {
     types: [],
     makeDefault: true
-  });
-  Actors.registerSheet("archmage", MonkActorArchmageSheet, {
-    types: [],
-    makeDefault: false
-  });
-  Actors.registerSheet("archmage", CommanderActorArchmageSheet, {
-    types: [],
-    makeDefault: false
-  });
-  Actors.registerSheet("archmage", RogueActorArchmageSheet, {
-    types: [],
-    makeDefault: false
   });
 
   RegisterConfigurationOptions();
@@ -132,15 +64,6 @@ Hooks.once('ready', async function() {
     game.settings.register('13th-age-expanded', 'showDebugLogs', {
       name: game.i18n.localize("13AE.SETTINGS.ShowDebugLogsName"),
       hint: game.i18n.localize("13AE.SETTINGS.ShowDebugLogsHint"),
-      scope: 'world',
-      config: true,
-      default: false,
-      type: Boolean,
-    });
-    
-    game.settings.register('13th-age-expanded', 'showRareCoins', {
-      name: game.i18n.localize("13AE.SETTINGS.ShowRareCoinsName"),
-      hint: game.i18n.localize("13AE.SETTINGS.ShowRareCoinsHint"),
       scope: 'world',
       config: true,
       default: false,
