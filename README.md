@@ -1,6 +1,5 @@
 ![](https://img.shields.io/badge/Foundry-v0.6.2-informational)
-![](https://img.shields.io/badge/13th%20Age-v1.5.0-informational)
-[![](https://img.shields.io/bage/FoundryGet-enabled-success)](https://github.com/cswendrowski/foundryget)
+[![](https://img.shields.io/badge/FoundryGet-compatible-success)](https://github.com/cswendrowski/foundryget)
 [![](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%243-orange)](https://www.buymeacoffee.com/T2tZvWJ)
 
 <img src="http://site.pelgranepress.com/files/13th_Age/13thagecommunityuselogo.png" width="100" height="100" />
@@ -12,7 +11,11 @@ A small set of additional features for https://gitlab.com/asacolips-projects/fou
 
 # Installation
 
-Using [FoundryGet](https://github.com/cswendrowski/foundryget): `foundryget install https://raw.githubusercontent.com/cswendrowski/FoundryVTT-13th-Age-Expanded/master/module.json`
+Using [FoundryGet](https://github.com/cswendrowski/foundryget)
+
+```
+foundryget install https://raw.githubusercontent.com/cswendrowski/FoundryVTT-13th-Age-Expanded/master/module.json
+```
 
 
 # Features
