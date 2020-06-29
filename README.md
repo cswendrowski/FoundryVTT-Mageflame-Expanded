@@ -2,10 +2,7 @@
 [![](https://img.shields.io/badge/FoundryGet-compatible-success)](https://github.com/cswendrowski/foundryget)
 [![](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%243-orange)](https://www.buymeacoffee.com/T2tZvWJ)
 
-<img src="http://site.pelgranepress.com/files/13th_Age/13thagecompatible.png" width="100" height="100" />
-
-
-# FoundryVTT 13th Age Expanded
+# FoundryVTT Mageflame Expanded
 
 A small set of additional features for https://gitlab.com/asacolips-projects/foundry-mods/archmage/tree/master
 
@@ -14,7 +11,7 @@ A small set of additional features for https://gitlab.com/asacolips-projects/fou
 Using [FoundryGet](https://github.com/cswendrowski/foundryget)
 
 ```
-foundryget install https://raw.githubusercontent.com/cswendrowski/FoundryVTT-13th-Age-Expanded/master/module.json
+foundryget install https://raw.githubusercontent.com/cswendrowski/FoundryVTT-Mageflame-Expanded/releases/latest/module.json
 ```
 
 
