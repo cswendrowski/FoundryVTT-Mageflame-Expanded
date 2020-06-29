@@ -1,6 +1,6 @@
 {
-  "name": "13th-age-expanded",
-  "title": "13th Age Expanded",
+  "name": "mageflame-expanded",
+  "title": "Mageflame Expanded",
   "description": "A small set of additional features for https://gitlab.com/asacolips-projects/foundry-mods/archmage/tree/master",
   "semanticVersion": "3.0.0",
   "version": "3.0.0",
@@ -16,10 +16,10 @@
   "minimumSystemVersion": "1.5.0",
   "author": "Cody Swendrowski <cody@swendrowski.us>",
   "scripts": [
-    "./13th-age-expanded.js"
+    "./mageflame.js"
   ],
   "styles": [
-    "./13th-age-expanded.css"
+    "./mageflame.css"
   ],
   "languages": [
     {
@@ -28,51 +28,8 @@
       "path": "languages/en.json"
     }
   ],
-  "packs": [
-    {
-      "name": "briarelves",
-      "label": "Briar Elves",
-      "system": "archmage",
-      "path": "./packs/briarelves.db",
-      "entity": "Actor"
-    },
-    {
-      "name": "chaosmagetables",
-      "label": "Chaos Mage Tables",
-      "system": "archmage",
-      "path": "./packs/chaosmagetables.db",
-      "entity": "RollTable"
-    },
-    {
-      "name": "demonsandhell",
-      "label": "Demons and Hell",
-      "system": "archmage",
-      "path": "./packs/demonsandhell.db",
-      "entity": "Actor"
-    },
-    {
-      "name": "greatghoul",
-      "label": "Great Ghoul",
-      "system": "archmage",
-      "path": "./packs/greatghoul.db",
-      "entity": "Actor"
-    },
-    {
-      "name": "hellmarsh",
-      "label": "Hell Marsh",
-      "system": "archmage",
-      "path": "./packs/hellmarsh.db",
-      "entity": "Actor"
-    },
-    {
-      "name": "kobolds",
-      "label": "Kobolds",
-      "system": "archmage",
-      "path": "./packs/kobolds.db",
-      "entity": "Actor"
-    }
-  ],
-  "url": "https://github.com/cswendrowski/FoundryVTT-13th-Age-Expanded",
-  "manifest": "https://github.com/cswendrowski/FoundryVTT-13th-Age-Expanded/releases/download/v2.0.0/module.json",
-  "download": "https://github.com/cswendrowski/FoundryVTT-13th-Age-Expanded/releases/download/v2.0.0/13thAgeExpanded.zip"
+  "packs": [],
+  "url": "https://github.com/cswendrowski/FoundryVTT-Mageflame-Expanded",
+  "manifest": "https://github.com/cswendrowski/FoundryVTT-Mageflame-Expanded/releases/download/latest/module.json",
+  "download": "https://github.com/cswendrowski/FoundryVTT-Mageflame-Expanded/releases/download/latest/MageflameExpanded.zip"
 }

@@ -1,4 +1,4 @@
-name: 13th Age Expanded CI/CD
+name: Mageflame Expanded CI/CD
 
 on: [push]
 
@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@v2
 
     # create a zip file with all files required by the module to add to the release
-    - run: zip -r ./13a-expanded.zip module.json templates/ languages/ packs/
+    - run: zip -r ./mageflame-expanded.zip module.json templates/ languages/ packs/
 
     # Get the version from 'module.json'
     - name: Get Version
@@ -27,7 +27,7 @@ jobs:
         draft: false
         prerelease: false
         token: ${{ secrets.GITHUB_TOKEN }}
-        artifacts: './module.json,./13a-expanded.zip'
+        artifacts: './module.json,./mageflame-expanded.zip'
         tag: ${{ steps.get-version.outputs.version }}
 
     # Update the 'latest' release
@@ -41,5 +41,5 @@ jobs:
         draft: false
         prerelease: false
         token: ${{ secrets.GITHUB_TOKEN }}
-        artifacts: './module.json,./13a-expanded.zip'
+        artifacts: './module.json,./mageflame-expanded.zip'
         tag: latest

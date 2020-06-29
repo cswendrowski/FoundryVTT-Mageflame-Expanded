@@ -4,22 +4,22 @@ Hooks.once('ready', async function() {
   const version = 2.0;  //Current Version
 
   //Bootstrap
-  if (!window.ThirtenthAgeExpanded) {
-    window.ThirtenthAgeExpanded = { loaded: 0 };
-    window.ThirtenthAgeExpanded.setup = () => console.error('13th Age Expanded | Failed to setup 13th Age Expanded');
-    $(() => window.ThirtenthAgeExpanded.setup());
+  if (!window.MageflameExpanded) {
+    window.MageflameExpanded = { loaded: 0 };
+    window.MageflameExpanded.setup = () => console.error('Mageflame Expanded | Failed to setup Mageflame Expanded');
+    $(() => window.MageflameExpanded.setup());
   }
 
-  window.ThirtenthAgeExpanded.loaded = version;
+  window.MageflameExpanded.loaded = version;
 
   function log(log) {
-    if (game.settings.get("13th-age-expanded", "showDebugLogs")) {
+    if (game.settings.get("mageflame-expanded", "showDebugLogs")) {
       console.log(log);
     }
   }
 
-  window.ThirtenthAgeExpanded.setup = () => {
-    console.log(`13th Age Expanded | Initializing v` + version);
+  window.MageflameExpanded.setup = () => {
+    console.log(`Mageflame Expanded | Initializing v` + version);
     RegisterConfigurationOptions();
   };
 
@@ -35,7 +35,7 @@ Hooks.once('ready', async function() {
           return (arg1 != arg2) ? options.fn(this) : options.inverse(this);
       });
 
-      return "modules/13th-age-expanded/templates/ReorganizedActorArchmageSheet.html";
+      return "modules/mageflame-expanded/templates/ReorganizedActorArchmageSheet.html";
     }
 
     getData() {
@@ -59,11 +59,11 @@ Hooks.once('ready', async function() {
   RegisterConfigurationOptions();
 
   function RegisterConfigurationOptions() {
-    console.log("13th Age Expanded | Registering configuration options");
+    console.log("Mageflame Expanded | Registering configuration options");
   
-    game.settings.register('13th-age-expanded', 'showDebugLogs', {
-      name: game.i18n.localize("13AE.SETTINGS.ShowDebugLogsName"),
-      hint: game.i18n.localize("13AE.SETTINGS.ShowDebugLogsHint"),
+    game.settings.register('mageflame-expanded', 'showDebugLogs', {
+      name: game.i18n.localize("Mageflame.SETTINGS.ShowDebugLogsName"),
+      hint: game.i18n.localize("Mageflame.SETTINGS.ShowDebugLogsHint"),
       scope: 'world',
       config: true,
       default: false,
