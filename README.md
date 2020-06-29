@@ -2,7 +2,7 @@
 [![](https://img.shields.io/badge/FoundryGet-compatible-success)](https://github.com/cswendrowski/foundryget)
 [![](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-%243-orange)](https://www.buymeacoffee.com/T2tZvWJ)
 
-<img src="http://site.pelgranepress.com/files/13th_Age/13thagecommunityuselogo.png" width="100" height="100" />
+<img src="http://site.pelgranepress.com/files/13th_Age/13thagecompatible.png" width="100" height="100" />
 
 
 # FoundryVTT 13th Age Expanded
@@ -31,10 +31,6 @@ Features that are ~~struck-through~~ have been absorbed into Archmage
 ![](./ki.PNG)
 
 3) ~~Also Commanders can keep track of Command Points (CP) and Rogues their Momentum!~~
-
-4) A set of Compendium rollable tables for Chaos Mage
-
-5) A Compendium full of monsters I've used in my campaign, provided under the Community Use License
 
 6) ~~Coin tracking~~
 
