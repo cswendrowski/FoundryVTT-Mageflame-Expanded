@@ -37,6 +37,6 @@ Features that are ~~struck-through~~ have been absorbed into Archmage
 
 ![](./rarecoins.PNG)
 
-8) A new sheet that reorganizes how Powers are shown
+8) ~~A new sheet that reorganizes how Powers are shown~~
 
 ![](./reorganized.PNG)
