@@ -6,6 +6,8 @@
 
 A small set of additional features for https://gitlab.com/asacolips-projects/foundry-mods/archmage/tree/master
 
+# OBSOLETE. These changes are now part of the core system
+
 # Installation
 
 Using [FoundryGet](https://github.com/cswendrowski/foundryget)
